@@ -15,8 +15,8 @@ let getHomePage = (req, res) => {
         address: row.address,
       });
     });
-    console.log("Check data: ", JSON.stringify(data));
-    return res.render("index.ejs", { dataUser: JSON.stringify(data) });
+    // console.log("Check data: ", JSON.stringify(data));
+    return res.render("index.ejs", { dataUser: data });
   });
 };
 
