@@ -4,8 +4,8 @@ import homeController from "../controller/homeController.js";
 let router = express.Router();
 
 const initWebRoutes = (app) => {
+  router.get('/detail/user/:userID', homeController.getDetailPage)
   router.get('/', homeController.getHomePage);
-
   router.get('/about', (req, res) => {
     res.send("Hello World form /about");
   });
