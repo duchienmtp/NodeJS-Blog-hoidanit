@@ -7,6 +7,9 @@ const initWebRoutes = (app) => {
   router.get('/detail/user/:userID', homeController.getDetailPage)
   router.get('/', homeController.getHomePage);
   router.post('/create-new-user', homeController.createNewUser)
+  router.post('/delete-user', homeController.deleteUser)
+  router.get('/edit-user/:id', homeController.getEditPage)
+  router.post('/update-user', homeController.postUpdateUser)
   router.get('/about', (req, res) => {
     res.send("Hello World form /about");
   });
